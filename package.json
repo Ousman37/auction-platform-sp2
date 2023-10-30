@@ -1,0 +1,15 @@
+{
+  "name": "auction-platform-sp2",
+  "version": "1.0.0",
+  "description": "An auction platform for user item listings and bidding, built as a part of Semester Project 2.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["auction", "bidding", "listings", "semester-project", "tailwindcss", "web-application"],
+  "author": "Ethmane Didi<ousman.didibela@gmail.com>", 
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.3.5"
+  }
+}

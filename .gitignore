@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+
+# OS generated files
+.DS_Store               # For Mac
+Thumbs.db               # For Windows
+*.swp                   # For Vim users
+*.swo                   # For Vim users
+
+# Editor folders
+.vscode/
+.idea/
+
+# Build directory
+/dist/
+
+# Environment variables
+.env
+
+# Logs
+npm-debug.log*
+
+# Other assets
+*.log
+*.pid
+*.seed
+
