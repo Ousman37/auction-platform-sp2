@@ -1,5 +1,3 @@
-// index.mjs
-
 import { regFormListener } from "./handlers/register.mjs";
 import { loginFormListener } from "./handlers/login.mjs";
 import { viewAllListings } from "./handlers/listings.mjs";
