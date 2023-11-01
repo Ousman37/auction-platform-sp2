@@ -1,11 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auction Platform | Home</title>
     
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/eog4cop.css" />
+
+    <!-- Bootstrap CSS - Make sure the version is consistent -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    
+    <!-- Toastr CSS for notifications -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet" />
+    
+</head>
+
+<body>
+    <header class="shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="./index.html">
+                    <div class="d-flex fs-2 py-2">
+                        <p class="m-0">Auction</p>
+                        <p class="m-0 text-secondary">Platform</p>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link cool-hover" href="./pages/listings/" aria-current="page">Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/profile/">
+                                <img id="navImg" class="nav-img img-fluid" alt="profile page" />
+                            </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <span class="nav-link text-danger" style="cursor:pointer;">Logout</span>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./pages/login/" class="btn btn-primary">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="layer">
+            <div class="container d-flex flex-column-reverse flex-lg-row align-items-center">
+                <div class="pe-lg-5 col-12 col-sm-10 col-md-8 col-lg-4 d-flex flex-column align-items-center align-items-lg-start">
+                    <h1 class="mb-3">Elegance Meets Excitement: Your Auction Destination</h1>
+                    <p class="h5 mb-4">
+                        Step into the world of prestigious auctions online. Log in and experience luxury, trust, and the thrill of the bid.
+                    </p>
+
+                    <a href="./pages/listings/index.html" class="btn btn-primary px-5 py-3">Listings</a>
+                </div>
+                <div class="col-12 col-md-10 col-lg-8">
+                    <img class="img-fluid" src="./images/hero-auction.png" />
+                </div>
+            </div>
+        </div>
+        <svg viewBox="0 0 500 60" preserveAspectRatio="xMinYMin meet">
+            <path class="layer-fill" d="M0, 30 C200, -30 350, 100 500, 30 L500, 00 L0, 0 Z"></path>
+        </svg>
+        <div class="container d-flex justify-content-between my-5">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <img class="profile-img img-fluid" src="./images/login-.gif" />
+                    <h2 class="text-purple mb-3">Step Inside Our World</h2>
+                    <p>
+                        <strong>
+                            Immerse yourself in the world of exclusive auctions. If you're not with us yet, let's 
+                            <a href="./pages/login/">begin your journey</a>.
+                        </strong>
+                    </p>
+                    <p>
+                        Still pondering? 
+                        <a href="./pages/register/">Create an account</a> with us. It's straightforward, secure, and swift. Once onboard, witness the thrill of our esteemed auction platform.
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <img class="profile-img img-fluid" src="./images/award.gif" />
+                    <h2 class="text-purple">Engage in Elite Bidding</h2>
+                    <p>
+                        <strong>
+                            Partake in the art of bidding exclusively as a member. Please 
+                            <a href="./pages/login/">sign in</a> to place your bids. New to our distinguished community? 
+                            <a href="./pages/register/">Register now</a> and receive a generous 1000 credits to commence your journey.
+                        </strong>
+                    </p>
+                    <p>
+                        Navigate our curated collections or employ our sophisticated search system to uncover the exact item your heart desires.
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <img class="profile-img img-fluid" src="./images/money-bag.gif" />
+                    <h2 class="text-purple mb-3">Build Your Empire</h2>
+                    <p>
+                        <strong>
+                            Transcend the ordinary and build your auction empire. Watch, bid, and accumulate high-value assets. Our 
+                            <a href="./pages/login/">portal</a> 
+                            will aid you in monitoring, maintaining, and growing your collection.
+                        </strong>
+                    </p>
+                    <p>
+                        With every bid, advance a step closer to becoming the crown jewel of the auction world. Rise above the competition. Outbid. Triumph.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container">
+            <div class="d-flex justify-content-center">
+                <img class="img-fluid" src="./images/buildings.png" />
+            </div>
+        </div> -->
+    </main>
+    <footer>
+        <div class="container py-2">
+            <!-- Navigation links -->
+            <div class="footer-nav d-flex flex-column flex-md-row align-items-center justify-content-center mb-3 mb-md-0">
+                <a href="#/pages/terms/" class="mx-2 my-1">Terms of Service</a>
+                <div class="mx-2 divider d-none d-md-block"></div>
+                <a href="#/pages/privacy/" class="mx-2 my-1">Privacy Policy</a>
+                <div class="mx-2 divider d-none d-md-block"></div>
+                <a href="#/pages/about/" class="mx-2 my-1">About Us</a>
+                <div class="mx-2 divider d-none d-md-block"></div>
+                <a href="#/pages/contact/" class="mx-2 my-1">Contact</a>
+            </div>
+        
+            <!-- Social Media Icons -->
+            <div class="social-icons d-flex align-items-center justify-content-center mb-3 mb-md-0">
+                <div class="social-icons d-flex align-items-center mb-3 mb-md-0">
+                    <a href="#" class="mx-2">
+                        <img src="../../assets/icons/facebook.svg" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="#" class="mx-2">
+                        <img src="../../assets/icons/twitter.svg" alt="Twitter" width="24" height="24">
+                    </a>
+                    <a href="#" class="mx-2">
+                        <img src="../../assets/icons/instagram.svg" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="#" class="mx-2">
+                        <img src="../../assets/icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                    </a>
+                </div>
+        
+            </div>
+        
+            <!-- Logo and Byline -->
+            <div class="text-center mb-3">
+                <h3 class="fs-3">Auction <span class="text-secondary">Platform</span></h3>
+                <p class="fs-6">By Web developers - Design by <a href="#" class="text-muted">Ethmane</a></p>
+            </div>
+        
+            <!-- Copyright Information -->
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <div class="copyright mb-2">
+                    © 2023 Auction Platform. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+      <!-- Scripts -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    
+    <!-- Popper.js (necessary for Bootstrap tooltips and popovers) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    
+    <!-- Bootstrap JS - Make sure the version is consistent -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Toastr JS for notifications -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="/src/js/index.mjs" type="module"></script>
+    
+
 </body>
+
 </html>
