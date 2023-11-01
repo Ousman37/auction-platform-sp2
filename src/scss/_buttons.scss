@@ -1,0 +1,41 @@
+.btn-secondary {
+  background-color: $dark-grey;
+  border: none;
+  color: $off-white;
+}
+
+.btn-secondary:hover {
+  background-color: $dark-grey !important;
+}
+
+.btn-success {
+  border: none;
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: $secondary;
+  letter-spacing: 1.1px;
+  font-weight: 700;
+  border: 2px solid $primary;
+}
+
+.btn-primary:hover {
+  background-color: $primary;
+}
+
+.btn {
+  border-radius: 360px;
+}
+
+.btn-listing {
+  width: 250px;
+  background-color: $primary;
+  border-radius: 10px;
+  color: $off-white;
+}
+
+.btn-listing:hover {
+  background-color: $rich-purple;
+  color: $off-white;
+}
