@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="https://use.typekit.net/eog4cop.css">
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- Toastr CSS -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="../../dist/css/style.css">
+
+    
+
 
     <title>Auction Platform | Listings</title>
 </head>
@@ -38,7 +45,7 @@
         <div>
             <div class="bg-light pt-4">
                 <div class="width mx-auto">
-                    <input id="searchbar" class="p-2 border-0 w-50 d-flex mx-auto" type="search" placeholder="Search for listing..">
+                    <input id="searchbar" class="p-2 border-0 w-100 d-flex mx-auto" type="search" placeholder="Search for Listings, categories, or auctions...">
                 </div>
             </div>
             <svg viewBox="0 0 500 50" preserveAspectRatio="xMinYMin meet">
@@ -101,8 +108,13 @@
             </div>
         </div>
     </footer>
+  
+      <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     
-    <script src="/src/js/index.mjs" type="module"></script>
+      <!-- Custom Script -->
+    <script type="module" src="/src/js/index.mjs"  defer></script>
     
 </body>
 </html>
