@@ -7,7 +7,8 @@ import { viewProfileListings } from "./handlers/profileListings.mjs";
 import { viewProfileInfo } from "./handlers/profileInfo.mjs";
 import { viewUserListings } from "./handlers/userProfileListings.mjs";
 import { updateAvatarURL } from "./handlers/changeAvatar.mjs";
-import { viewForm, createListingForm, changeAvatarButton } from "./handlers/createListing.mjs";
+import { changeAvatarButton, viewForm, createListingForm } from "./handlers/createListing.mjs";
+
 import { viewProfileImg } from "./handlers/profileImgNav.mjs";
 import { showCreditAmount } from "./handlers/displayCredits.mjs";
 import { navFix } from "./handlers/nav.mjs";
