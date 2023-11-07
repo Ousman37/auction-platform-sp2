@@ -14,6 +14,8 @@ import { showCreditAmount } from "./handlers/displayCredits.mjs";
 import { navFix } from "./handlers/nav.mjs";
 import { viewBiddingHistory } from "./handlers/biddingHistory.mjs";
 
+
+
 // Wait for the DOM to be fully loaded before running any scripts
 document.addEventListener('DOMContentLoaded', () => {
   // Normalizes the path for routing
@@ -48,3 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 });
+

@@ -13,6 +13,15 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
 
   <title>Auction Platform | Profile</title>
+
+
+   <!-- Toastr JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+ 
+    
+
+   <!-- Your custom JS -->
+  <script type="module" src="/src/js/index.mjs" defer></script>
 </head>
 
 <body>
@@ -54,7 +63,7 @@
 
 <main>
     <!-- Profile container -->
-    <div class="container">
+     <div class="container">
     <div  id="profile-container" class="bg-light d-flex flex-column justify-content-center">
     <div class="width mx-auto py-3 py-lg-5 d-flex flex-column flex-lg-row align-items-center   justify-content-center">
     <div class="d-flex flex-column align-items-center">
@@ -80,7 +89,7 @@
         </div>
           
       </div>
-      </div>
+    </div> 
         <div class="bg-light d-flex justify-content-center">
           <div>
             <p type="button" class="change-avatar my-2">Update Avatar</p>
@@ -111,7 +120,7 @@
             class="d-flex justify-content-lg-start justify-content-center mt-4 mt-lg-0"
           >
             <h2 id="listingsHeader" class="text-primary h3">
-              My Active Listings
+              Available Listings
             </h2>
           </div>
           <div class="d-flex justify-content-lg-end justify-content-center">
@@ -119,7 +128,7 @@
               href="#createListingButton"
               id="createListingButton"
               class="btn btn-primary d-flex align-items-center create-listing"
-              >Create Listing</a
+              ><span class="plus-sign">&#43;</span> Add New Listing</a
             >
           </div>
         </div>
@@ -224,21 +233,59 @@
         </div>
         <div id="bidListings" class="width mx-auto"></div>
       </main>
-    
-    
-    
+      <footer>
+        <div class="container py-2">
+            <!-- Navigation links -->
+            <div class="footer-nav d-flex flex-column flex-md-row align-items-center justify-content-center mb-3 mb-md-0">
+                <a href="#/pages/terms/" class="mx-2 my-1">Terms of Service</a>
+                <div class="mx-2 divider d-none d-md-block"></div>
+                <a href="#/pages/privacy/" class="mx-2 my-1">Privacy Policy</a>
+                <div class="mx-2 divider d-none d-md-block"></div>
+                <a href="#/pages/about/" class="mx-2 my-1">About Us</a>
+                <div class="mx-2 divider d-none d-md-block"></div>
+                <a href="#/pages/contact/" class="mx-2 my-1">Contact</a>
+            </div>
+        
+            <!-- Social Media Icons -->
+            <div class="social-icons d-flex align-items-center justify-content-center mb-3 mb-md-0">
+                <div class="social-icons d-flex align-items-center mb-3 mb-md-0">
+                    <a href="#" class="mx-2">
+                        <img src="../../assets/icons/facebook.svg" alt="Facebook" width="24" height="24">
+                    </a>
+                    <a href="#" class="mx-2">
+                        <img src="../../assets/icons/twitter.svg" alt="Twitter" width="24" height="24">
+                    </a>
+                    <a href="#" class="mx-2">
+                        <img src="../../assets/icons/instagram.svg" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="#" class="mx-2">
+                        <img src="../../assets/icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
+                    </a>
+                </div>
+        
+            </div>
+        
+            <!-- Logo and Byline -->
+            <div class="text-center mb-3">
+                <h3 class="fs-3">Auction <span class="text-secondary">Platform</span></h3>
+                <p class="fs-6">By Web developers - Design by <a href="#" class="text-muted">Ethmane</a></p>
+            </div>
+        
+            <!-- Copyright Information -->
+            <div class="d-flex flex-column align-items-center justify-content-center">
+                <div class="copyright mb-2">
+                    © 2023 Auction Platform. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+  
      <!-- Bootstrap JS, Popper.js, and jQuery -->
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.2/dist/umd/popper.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  
-     <!-- Toastr JS -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
- 
     
-
-    <!-- Your custom JS -->
-   <script type="module" src="/src/js/index.mjs" defer></script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@ export async function register(profile) {
       debug: false,
       newestOnTop: false,
       progressBar: true,
-      positionClass: "toast-bottom-right",
+      positionClass: "toast-top-center",
       preventDuplicates: true,
       showDuration: "300",
       hideDuration: "1000",
