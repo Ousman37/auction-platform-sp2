@@ -1,12 +1,18 @@
 export function profileBiddingTemplate(bidding) {
   const biddingHistoryContainer = document.createElement("div");
   const allBiddings = bidding;
+  // Ensure the element exists before trying to access it
   const biddingCountContainer = document.querySelector("#bidsOn");
-  const bidsCount = bidding.length;
 
-  biddingCountContainer.innerText = bidsCount;
+  if (biddingCountContainer) {
+    const bidsCount = bidding.length;
+    biddingCountContainer.innerText = bidsCount;
+  } else {
+    // Handle the case where the element doesn't exist
+    console.error('biddingCountContainer element not found');
+  }
 
-  allBiddings.map((fetch) => {
+  allBiddings.forEach((fetch) => { // Use forEach for array iteration
     const bids = document.createElement("a");
     const bidsName = document.createElement("strong");
     const bidsAmount = document.createElement("strong");
@@ -37,22 +43,27 @@ export function profileBiddingTemplate(bidding) {
     );
     ends.classList.add("col-4", "d-flex", "justify-content-end", "mb-0");
 
-    
     bids.setAttribute(
       "href",
       `../../pages/specific/?id=${fetch.listing.id}`
     );
-    
 
-    biddingHistoryContainer.appendChild(bids);
     bids.appendChild(bidsName);
     bids.appendChild(bidsAmount);
     bids.appendChild(ends);
+    biddingHistoryContainer.appendChild(bids);
   });
 
   return biddingHistoryContainer;
 }
 
 export function renderBiddingData(bidding, parent) {
-  parent.append(profileBiddingTemplate(bidding));
+  const biddingData = profileBiddingTemplate(bidding);
+  // Ensure the parent exists before trying to append to it
+  if (parent) {
+    parent.append(biddingData);
+  } else {
+    // Handle the case where the parent doesn't exist
+    console.error('Parent element not found');
+  }
 }
