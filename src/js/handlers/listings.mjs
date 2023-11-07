@@ -1,5 +1,5 @@
 import { renderListingsTemplates } from "../templates/listingsTemplate.mjs";
-import * as methods from "../api/listings/read.mjs";
+import * as methods from "../api/listings/listingFetchHandlers.mjs";
 
 const loader = document.querySelector(".loading_icon");
 
