@@ -58,16 +58,23 @@
                       <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                       <div class="form-floating flex-fill mb-0">
                         <input
-                          type="email"
-                          class="form-control input-fix"
-                          placeholder="Email"
-                          name="email"
-                          required
-                          pattern="^[\w\-.]+@(stud.)?noroff.no$"
-                          title="Only @(stud.)noroff.no domains are allowed to register."
+                            type="email"
+                            class="form-control input-fix"
+                            id="emailInput"
+                            placeholder="Email"
+                            name="email"
+                            required
+                            pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                            aria-describedby="emailHelp"
+                            title="Please use your Noroff email address (e.g., name@noroff.no or name@stud.noroff.no)."
                         />
-                        <label class="form-label" for="">Your Email</label>
-                      </div>
+                        <label for="emailInput" class="form-label">Your Email</label>
+                        <small id="emailHelp" class="form-text">
+                          Registration is only open to Noroff email domains (@noroff.no or @stud.noroff.no).
+                      </small>
+                      
+                    </div>
+                    
                     </div>
 
                     <div class="d-flex flex-row align-items-center mb-4">
