@@ -49,21 +49,27 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li id="navListing" class="nav-item mx-2">
-                            <a class="nav-link" href="./pages/listings/">Listings</a>
+                        <li id="navListing" class="mx-2">
+                          <a
+                            class="cool-hover nav-link"
+                            href="./pages/listings/"
+                            aria-current="page"
+                            >Listings</a
+                          >
                         </li>
-                        <li id="navProfile" class="nav-item mx-2">
-                            <a href="./pages/profile/">
-                                <img id="navImg" src="path-to-profile-image.jpg" class="nav-img" alt="Profile" />
-                            </a>
+                        <li id="navProfile">
+                          <a href="./pages/profile/"
+                            ><img id="navImg" class="mx-2 nav-img" alt="profile page" />
+                            <div id="imgCont"></div>
+                          </a>
                         </li>
-                        <li id="navLogout" class="nav-item mx-2">
-                            <a class="nav-link text-danger" href="#">Logout</a>
+                        <li id="navLogout" class="nav-link logout mx-2 text-danger">
+                          Logout
                         </li>
-                        <li id="navLogin" class="nav-item mx-2">
-                            <a href="../login/" class="btn btn-primary">Login</a>
+                        <li id="navLogin">
+                          <a href="./pages/login/" class="btn btn-primary">Login</a>
                         </li>
-                    </ul>
+                      </ul>
                 </div>
             </nav>
         </div>
