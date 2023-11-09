@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Title of the Page-->
     <title>Auction Platform | Home</title>
     
+     <!-- Meta Description -->
+     <meta name="description" content="Join our Auction Platform to discover, bid, and win rare items from the comfort of your home. Experience the thrill of the auction with us." />
+
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/eog4cop.css" />
 
@@ -23,7 +28,7 @@
 
 
        <!-- Custom Script -->
-    <script type="module" src="/src/js/index.mjs" ></script>
+    <script type="module" src="/src/js/index.mjs" defer></script>
     
 </head>
 
@@ -35,7 +40,7 @@
                 <a class="navbar-brand" href="./index.html">
                     <div class="d-flex align-items-center fs-2 py-2">
                         <p class="m-0">Auction</p>
-                        <p class="m-0 text-secondary">Platform</p>
+                        <p class="m-0 text-secondary">Platform </p>
                     </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -63,6 +68,18 @@
             </nav>
         </div>
     </header>
+    <!-- Notification Message -->
+    <div class="container mt-4">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Welcome back!</strong> Check out our latest auction listings and make your bids.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Main content -->
+    
     <main>
         <div class="layer">
             <div class="container d-flex flex-column-reverse flex-lg-row align-items-center">
@@ -297,6 +314,9 @@
     
     
       <!-- Bootstrap Link -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  
+
       <!-- Bootstrap JS, Popper.js, and jQuery -->
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.2/dist/umd/popper.min.js"></script>

@@ -49,4 +49,3 @@ export function renderProfileData(profileData, parent) {
   // Append the new profile data
   parent.append(profileDataTemplate(profileData));
 }
-
