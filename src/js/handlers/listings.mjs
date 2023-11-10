@@ -1,19 +1,19 @@
-import { renderListingsTemplates } from "../templates/listingsTemplate.mjs";
-import * as methods from "../api/listings/listingFetchHandlers.mjs";
+import { renderListingsTemplates } from '../templates/listingsTemplate.mjs'
+import * as methods from '../api/listings/listingFetchHandlers.mjs'
 
-const loader = document.querySelector(".loading_icon");
+const loader = document.querySelector('.loading_icon')
 
 export async function viewAllListings() {
-  const listings = await methods.getListings();
-  const container = document.querySelector(".listings");
-  renderListingsTemplates(listings, container);
+  const listings = await methods.getListings()
+  const container = document.querySelector('.listings')
+  renderListingsTemplates(listings, container)
 
-  const noListings = document.querySelector("#noListings");
+  const noListings = document.querySelector('#noListings')
   if (container.firstChild) {
-    noListings.style.display = "none";
+    noListings.style.display = 'none'
   } else {
-    noListings.style.display = "block";
+    noListings.style.display = 'block'
   }
 
-  loader.classList.add("hide");
+  loader.classList.add('hide')
 }
