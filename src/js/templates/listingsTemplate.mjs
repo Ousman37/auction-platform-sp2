@@ -16,7 +16,7 @@ export function listingTemplate(listingData) {
 
   listing.setAttribute(
     "href",
-    `../../pages/specific/?id=${listingData.id}&name=${listingData.seller.name}`
+    `../../pages/specific/?id=${listingData.id}&name=${listingData.seller.name}`,
   );
 
   listing.setAttribute("id", listingData.id);
@@ -27,7 +27,7 @@ export function listingTemplate(listingData) {
     "flex-column",
     "align-items-center",
     "text-decoration-none",
-    "text-primary"
+    "text-primary",
   );
 
   listingCard.classList.add(
@@ -36,17 +36,17 @@ export function listingTemplate(listingData) {
     "flex-column",
     "mb-1",
     "justify-content-between",
-    "mx-2"
+    "mx-2",
   );
 
   imageContainer.classList.add("d-flex", "justify-content-center");
-  
+
   imageContent.setAttribute(
     "style",
     `background-image: url(${
       listingData.media[0] ||
       "https://usercontent.one/wp/www.vocaleurope.eu/wp-content/uploads/no-image.jpg?media=1642546813"
-    })`
+    })`,
   );
   imageContent.setAttribute("alt", listingData.title);
   imageContent.classList.add("listing-img");
@@ -67,9 +67,9 @@ export function listingTemplate(listingData) {
   const bids = listingData.bids || [];
   let highestBid = 0;
   if (bids.length > 0) {
-      highestBid = Math.max(...bids.map((winningBid) => winningBid.amount));
+    highestBid = Math.max(...bids.map((winningBid) => winningBid.amount));
   }
-  
+
   bidAmount.innerHTML =
     highestBid > 0
       ? '<small class="text-purple">Highest bid:</small>' + " £" + highestBid
@@ -80,7 +80,7 @@ export function listingTemplate(listingData) {
     "bg-light",
     "py-2",
     "px-3",
-    "border-fix"
+    "border-fix",
   );
 
   displayCountdown(listingData, ends, listing);

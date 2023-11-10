@@ -26,13 +26,29 @@ export function profileBiddingTemplate(bidding) {
     ends.innerText = fixedTime;
 
     // Apply classes to the created elements
-    bids.classList.add("d-flex", "justify-content-between", "px-2", "py-3", "bidHistoryElements", "text-primary", "text-decoration-none");
+    bids.classList.add(
+      "d-flex",
+      "justify-content-between",
+      "px-2",
+      "py-3",
+      "bidHistoryElements",
+      "text-primary",
+      "text-decoration-none",
+    );
     bidsName.classList.add("col-4", "d-flex", "justify-content-start", "mb-0");
-    bidsAmount.classList.add("col-4", "d-flex", "justify-content-center", "mb-0");
+    bidsAmount.classList.add(
+      "col-4",
+      "d-flex",
+      "justify-content-center",
+      "mb-0",
+    );
     ends.classList.add("col-4", "d-flex", "justify-content-end", "mb-0");
 
     // Set the href attribute for the bids anchor tag
-    bids.setAttribute("href", `/Semester-Project-2/pages/specific/?id=${bidItem.listing.id}`);
+    bids.setAttribute(
+      "href",
+      `/Semester-Project-2/pages/specific/?id=${bidItem.listing.id}`,
+    );
 
     // Append child elements to the bids anchor tag
     bids.appendChild(bidsName);
@@ -48,10 +64,10 @@ export function profileBiddingTemplate(bidding) {
 
 export function renderBiddingData(bidding, selector) {
   // Ensure DOM content is loaded
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const parent = document.querySelector(selector);
     if (parent) {
-      parent.innerHTML = ''; // Clear previous content
+      parent.innerHTML = ""; // Clear previous content
       parent.append(profileBiddingTemplate(bidding));
     } else {
       console.error(`The selector "${selector}" did not match any element.`);

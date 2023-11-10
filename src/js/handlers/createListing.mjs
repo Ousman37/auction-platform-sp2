@@ -56,4 +56,4 @@ function createListingForm() {
 }
 
 // // Export the functions
- export { changeAvatarButton, viewForm, createListingForm };
+export { changeAvatarButton, viewForm, createListingForm };

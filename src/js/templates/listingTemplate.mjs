@@ -40,7 +40,7 @@ export function specificListingTemplate(listingSpecific) {
     "mx-auto",
     "d-flex",
     "justify-content-center",
-    "flex-column"
+    "flex-column",
   );
 
   // Listing container
@@ -51,7 +51,7 @@ export function specificListingTemplate(listingSpecific) {
     "d-flex",
     "flex-column",
     "align-items-center",
-    "align-items-md-start"
+    "align-items-md-start",
   );
   listingText.classList.add("d-flex", "flex-column", "col-12", "col-md-6");
 
@@ -67,7 +67,7 @@ export function specificListingTemplate(listingSpecific) {
     "d-flex",
     "mediaContainer",
     "col-12",
-    "col-md-8"
+    "col-md-8",
   );
 
   const fetchMedia = listingSpecific.media;
@@ -108,7 +108,7 @@ export function specificListingTemplate(listingSpecific) {
     "px-5",
     "ms-md-2",
     "mt-2",
-    "mt-md-0"
+    "mt-md-0",
   );
   bidForm.classList.add("d-flex", "flex-column", "input-width", "flex-md-row");
   bidHeader.classList.add("h6", "mx-2");

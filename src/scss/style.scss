@@ -23,28 +23,30 @@
 /* Custom styles for the auction image layer */
 
 .layer .text-box {
-  text-align: center; /* Center text on smaller screens */
+  text-align: center;
 }
 
 .layer .text-box h1 {
-  font-size: 2rem; /* Adjust the size of the h1 heading for smaller screens if necessary */
+  font-size: 2rem;
+  color: $classic-white;
+  font-weight: 700;
 }
 
 .layer .text-box p {
-  font-size: 1rem; /* Adjust paragraph text size for readability on smaller screens */
+  font-size: 1rem;
+  color: $off-white;
 }
 
 .layer .image-box {
   display: flex;
-  justify-content: center; 
-  
+  justify-content: center;
 }
 
 .layer .responsive-image {
   width: 100%;
-  height: auto; 
-  max-width: 600px; 
-  object-fit: contain; 
+  height: auto;
+  max-width: 600px;
+  object-fit: contain;
   margin-top: 2rem;
   margin-bottom: 1rem;
   border-radius: 1rem;
@@ -53,21 +55,21 @@
 /* Responsive adjustments with media queries */
 @media (max-width: 991px) {
   .layer .text-box {
-      margin-bottom: 2rem; /* Add some space between the text box and image on smaller screens */
+    margin-bottom: 2rem;
   }
 }
 
 @media (max-width: 767px) {
   .layer {
-      padding: 1rem; /* Add padding on very small screens to ensure content doesn't touch the edges */
+    padding: 1rem;
   }
 
   .layer .text-box h1 {
-      font-size: 1.75rem; /* Slightly smaller h1 heading on very small screens */
+    font-size: 1.75rem;
   }
 
   .layer .text-box p {
-      font-size: 0.9rem; /* Smaller paragraph text on very small screens */
+    font-size: 0.9rem;
   }
 }
 
@@ -106,8 +108,7 @@ body {
 }
 
 main {
-  min-height: 70rem
-  
+  min-height: 70rem;
 }
 
 .loading_icon {
@@ -177,16 +178,23 @@ nav {
   cursor: pointer;
 }
 
-
 .img-fluid {
-  max-width: 80%;  
-  height: auto;    
-  margin-left: 98px;  
-  display: block;  
+  max-width: 80%;
+  height: auto;
+  margin-left: 98px;
+  display: block;
   margin-top: 15px;
-  border-radius: 20px 20px 20px 20px; 
+  border-radius: 20px 20px 20px 20px;
+}
 
-  
+// text-testimonial
+.text-testimonial {
+  color: $off-white;
+}
+
+.body-testimonial {
+  margin-top: 3rem;
+  background-color: $fade-blue-gray;
 }
 // .success-message {
 //   color: #28a745; /* Green color for success */
@@ -198,51 +206,51 @@ nav {
 //   /* Additional styling */
 // }
 
-
-// Profile tester 
+// Profile tester
 .plus-sign {
-  font-size: 1.8em; 
-  color: $vibrant-yellow; 
-  margin-right: 0.5em; 
+  font-size: 1.8em;
+  color: $vibrant-yellow;
+  margin-right: 0.5em;
 }
 
- /* Adding some basic styling for demonstration */
-       
-        #profile-container {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        
-        .card {
-            background-color: #f9f9f9;
-            margin: 5px;
-            border-radius: 8px;
-            padding: 10px;
-            
-        }
-        
-        
-    
+/* Adding some basic styling for demonstration */
+
+#profile-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card {
+  background-color: $off-white;
+  margin: 5px;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.bg-light {
+  background-color: $off-white !important;
+}
+
 // -------- Profile --------- //
 #bidListings,
 #profile-listings {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
 .width {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .profile-img {
@@ -300,7 +308,7 @@ nav {
 }
 
 .listingCard:hover {
-  background-color: $light-grey;
+  background-color: $fade-blue-gray;
   transition: ease-in-out;
   box-shadow: none;
   border-radius: 10px;
@@ -386,90 +394,88 @@ nav {
   border-radius: 360px;
 }
 
-
 // Breakpoints
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 
 // Footer styles
 footer {
-    background-color: $mid-grey;
-    color: $classic-white;
-    padding: 20px 0;
+  background-color: $mid-grey;
+  color: $classic-white;
+  padding: 20px 0;
 
-    a {
-      color: $off-white;
-      transition: color 0.3s ease;  
-      &:hover {
-          color: $dark-grey;      
-          text-decoration: underline; 
-      }
+  a {
+    color: $off-white;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $dark-grey;
+      text-decoration: underline;
+    }
   }
+
+  .divider {
+    background-color: $light-purple;
+    height: 1px;
+    width: 20px;
+  }
+
+  .text-muted {
+    color: $dark-grey !important;
+    &:hover {
+      color: $light-grey !important;
+    }
+  }
+
+  .social-icons img {
+    filter: grayscale(1) brightness(0.5) contrast(1.2);
+    transition: filter 0.3s ease;
+  }
+
+  .social-icons a:hover img {
+    filter: grayscale(0) brightness(1) contrast(1);
+  }
+
+  // Responsive adjustments
+  @media (max-width: $breakpoint-md) {
+    .container {
+      flex-direction: column;
+    }
+
+    .footer-nav,
+    .social-icons,
+    .copyright,
+    .design-by {
+      text-align: center;
+      margin-bottom: 15px;
+    }
 
     .divider {
-        background-color: $light-purple;
-        height: 1px;
-        width: 20px;
+      display: none;
     }
-
-    .text-muted {
-        color: $dark-grey !important;
-        &:hover {
-            color: $light-grey !important;
-        }
-    }
-    
-    .social-icons img {
-      filter: grayscale(1) brightness(0.5) contrast(1.2); 
-      transition: filter 0.3s ease; 
   }
-  
-  .social-icons a:hover img {
-      filter: grayscale(0) brightness(1) contrast(1); 
+
+  @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+    .footer-nav a,
+    .social-icons a {
+      margin: 0 10px;
+    }
   }
-  
-    // Responsive adjustments
-    @media (max-width: $breakpoint-md) {
-        .container {
-            flex-direction: column;
-        }
-        
-        .footer-nav,
-        .social-icons,
-        .copyright,
-        .design-by {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        .divider {
-            display: none;  
-        }
-    }
-
-    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
-        .footer-nav a,
-        .social-icons a {
-            margin: 0 10px;  
-        }
-    }
 }
 .responsive-image {
   max-width: 100%;
-  max-height: 500px; 
-  width: auto; 
+  max-height: 500px;
+  width: auto;
   height: auto;
-  object-fit: cover; 
+  object-fit: cover;
 
   .responsive-image-fit {
     object-fit: contain;
   }
- 
 }
 
 @media (max-width: 991px) {
   .image-box {
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
   }
 }
 
@@ -484,63 +490,60 @@ footer {
   }
 }
 
-
-
-
 /* Auction-themed image section styles */
 
 .auction-themed-image-section {
   padding: 2rem 0;
   text-align: center;
-  background-color: #f8f9fa; /* light background, adjust color as needed */
+  background-color: #f8f9fa;
 }
 
 .auction-themed-image-section .section-title {
   font-size: 2.5rem;
-  color: #333; /* dark text color, adjust as needed */
+  color: #333;
   margin-bottom: 0.5rem;
 }
 
 .auction-themed-image-section .section-subtitle {
   font-size: 1.2rem;
-  color: #555; /* slightly lighter text color, adjust as needed */
+  color: #555;
   margin-bottom: 2rem;
 }
 
 .auction-themed-image-section .image-container {
   max-width: 100%;
-  padding: 1rem; /* padding around the image */
+  padding: 1rem;
 }
 
 /* New class for responsive auction image */
 .auction-themed-image-section .img-auction-responsive {
-  max-width: 100%; /* ensures the image is not bigger than its container */
-  height: auto; /* keeps the aspect ratio of the image */
-  border-radius: 0.25rem; /* optional: adds rounded corners to the image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional: adds a shadow for depth */
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   .auction-themed-image-section .section-title {
-      font-size: 2rem;
+    font-size: 2rem;
   }
   .auction-themed-image-section .section-subtitle {
-      font-size: 1rem;
+    font-size: 1rem;
   }
   .auction-themed-image-section .img-auction-responsive {
-      max-height: 250px; /* smaller image on mobile */
+    max-height: 250px;
   }
 }
 
 @media (max-width: 576px) {
   .auction-themed-image-section .section-title {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
   .auction-themed-image-section .section-subtitle {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
   .auction-themed-image-section .img-auction-responsive {
-      max-height: 200px; /* even smaller image on smaller mobile devices */
+    max-height: 200px;
   }
 }

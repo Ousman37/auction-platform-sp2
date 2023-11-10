@@ -1,332 +1,500 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Title of the Page-->
     <title>Auction Platform | Home</title>
-    
-     <!-- Meta Description -->
-     <meta name="description" content="Join our Auction Platform to discover, bid, and win rare items from the comfort of your home. Experience the thrill of the auction with us." />
+
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="Join our Auction Platform to discover, bid, and win rare items from the comfort of your home. Experience the thrill of the auction with us."
+    />
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/eog4cop.css" />
 
     <!-- Bootstrap CSS - Make sure the version is consistent -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./dist/css/style.css" />
-    
+
     <!-- Toastr CSS for notifications -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+      rel="stylesheet"
+    />
 
-     <!-- Toastr JS for notifications -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <!-- Toastr JS for notifications -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-
-       <!-- Custom Script -->
+    <!-- Custom Script -->
     <script type="module" src="/src/js/index.mjs" defer></script>
-    
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Header: Using Bootstrap Navbar Component -->
     <header class="shadow-sm">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="./index.html">
-                    <div class="d-flex align-items-center fs-2 py-2">
-                        <p class="m-0">Auction</p>
-                        <p class="m-0 text-secondary">Platform </p>
-                    </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="./index.html">
+            <div class="d-flex align-items-center fs-2 py-2">
+              <p class="m-0">Auction</p>
+              <p class="m-0 text-secondary">Platform</p>
+            </div>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li id="navListing" class="mx-2">
+                <a
+                  class="cool-hover nav-link"
+                  href="./pages/listings/"
+                  aria-current="page"
+                  >Listings</a
+                >
+              </li>
+              <li id="navProfile">
+                <a href="./pages/profile/"
+                  ><img id="navImg" class="mx-2 nav-img" alt="profile page" />
+                  <div id="imgCont"></div>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li id="navListing" class="mx-2">
-                          <a
-                            class="cool-hover nav-link"
-                            href="./pages/listings/"
-                            aria-current="page"
-                            >Listings</a
-                          >
-                        </li>
-                        <li id="navProfile">
-                          <a href="./pages/profile/"
-                            ><img id="navImg" class="mx-2 nav-img" alt="profile page" />
-                            <div id="imgCont"></div>
-                          </a>
-                        </li>
-                        <li id="navLogout" class="nav-link logout mx-2 text-danger">
-                          Logout
-                        </li>
-                        <li id="navLogin">
-                          <a href="./pages/login/" class="btn btn-primary">Login</a>
-                        </li>
-                      </ul>
-                </div>
-            </nav>
-        </div>
+              </li>
+              <li id="navLogout" class="nav-link logout mx-2 text-danger">
+                Logout
+              </li>
+              <li id="navLogin">
+                <a href="./pages/login/" class="btn btn-primary">Login</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <!-- Notification Message -->
     <div class="container mt-4">
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Welcome back!</strong> Check out our latest auction listings and make your bids.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Welcome back!</strong> Check out our latest auction listings and
+        make your bids.
+        <button
+          type="button"
+          class="close"
+          data-dismiss="alert"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
     </div>
-    
+
     <!-- Main content -->
-    
     <main>
-        <div class="layer">
-            <div class="container d-flex flex-column-reverse flex-lg-row align-items-center">
-                <div class="text-box pe-lg-5 col-12 col-sm-10 col-md-8 col-lg-4 d-flex flex-column align-items-center align-items-lg-start">
-                    <h1 class="mb-3">Elegance Meets Excitement: Your Auction Destination</h1>
-                    <p class="h5 mb-4">
-                        Step into the world of prestigious auctions online. Log in and experience luxury, trust, and the thrill of the bid.
-                    </p>
-        
-                    <a href="./pages/listings/index.html" class="btn btn-primary px-5 py-3">View auction listings</a>
-                </div>
-                <div class="image-box col-12 col-md-10 col-lg-8">
-                    <img class="responsive-image" src="./images/hero-auction1.jpg" alt="Auction" />
-                </div>
-            </div>
+      <div class="layer">
+        <div
+          class="container d-flex flex-column-reverse flex-lg-row align-items-center"
+        >
+          <div
+            class="text-box pe-lg-5 col-12 col-sm-10 col-md-8 col-lg-4 d-flex flex-column align-items-center align-items-lg-start"
+          >
+            <h1 class="mb-3">
+              Elegance Meets Excitement: Your Auction Destination
+            </h1>
+            <p class="h5 mb-4">
+              Step into the world of prestigious auctions online. Log in and
+              experience luxury, trust, and the thrill of the bid.
+            </p>
+
+            <a
+              href="./pages/listings/index.html"
+              class="btn btn-primary px-5 py-3"
+              >View auction listings</a
+            >
+          </div>
+          <div class="image-box col-12 col-md-10 col-lg-8">
+            <img
+              class="responsive-image"
+              src="./images/hero-auction1.jpg"
+              alt="Auction"
+            />
+          </div>
         </div>
-        
-        <svg viewBox="0 0 500 60" preserveAspectRatio="xMinYMin meet">
-            <path class="layer-fill" d="M0, 30 C200, -30 350, 100 500, 30 L500, 00 L0, 0 Z"></path>
-        </svg>
-        <div class="container d-flex justify-content-between my-5">
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <img class="profile-img img-fluid" src="./images/login-.gif" />
-                    <h2 class="text-purple mb-3">Step Inside Our World</h2>
-                    <p>
-                        <strong>
-                            Immerse yourself in the world of exclusive auctions. If you're not with us yet, let's 
-                            <a href="./pages/login/">begin your journey</a>.
-                        </strong>
-                    </p>
-                    <p>
-                        Still pondering? 
-                        <a href="./pages/register/">Create an account</a> with us. It's straightforward, secure, and swift. Once onboard, witness the thrill of our esteemed auction platform.
-                    </p>
-                </div>
+      </div>
 
-                <div class="col-12 col-md-4">
-                    <img class="profile-img img-fluid" src="./images/award.gif" />
-                    <h2 class="text-purple">Engage in Elite Bidding</h2>
-                    <p>
-                        <strong>
-                            Partake in the art of bidding exclusively as a member. Please 
-                            <a href="./pages/login/">sign in</a> to place your bids. New to our distinguished community? 
-                            <a href="./pages/register/">Register now</a> and receive a generous 1000 credits to commence your journey.
-                        </strong>
-                    </p>
-                    <p>
-                        Navigate our curated collections or employ our sophisticated search system to uncover the exact item your heart desires.
-                    </p>
-                </div>
+      <svg viewBox="0 0 500 60" preserveAspectRatio="xMinYMin meet">
+        <path
+          class="layer-fill"
+          d="M0, 30 C200, -30 350, 100 500, 30 L500, 00 L0, 0 Z"
+        ></path>
+      </svg>
+      <div class="container d-flex justify-content-between my-5">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <img class="profile-img img-fluid" src="./images/login-.gif" />
+            <h2 class="text-purple mb-3">Step Inside Our World</h2>
+            <p>
+              <strong>
+                Immerse yourself in the world of exclusive auctions. If you're
+                not with us yet, let's
+                <a href="./pages/login/">begin your journey</a>.
+              </strong>
+            </p>
+            <p>
+              Still pondering?
+              <a href="./pages/register/">Create an account</a> with us. It's
+              straightforward, secure, and swift. Once onboard, witness the
+              thrill of our esteemed auction platform.
+            </p>
+          </div>
 
-                <div class="col-12 col-md-4">
-                    <img class="profile-img img-fluid" src="./images/money-bag.gif" />
-                    <h2 class="text-purple mb-3">Build Your Empire</h2>
-                    <p>
-                        <strong>
-                            Transcend the ordinary and build your auction empire. Watch, bid, and accumulate high-value assets. Our 
-                            <a href="./pages/login/">portal</a> 
-                            will aid you in monitoring, maintaining, and growing your collection.
-                        </strong>
-                    </p>
-                    <p>
-                        With every bid, advance a step closer to becoming the crown jewel of the auction world. Rise above the competition. Outbid. Triumph.
-                    </p>
-                </div>
-            </div>
+          <div class="col-12 col-md-4">
+            <img class="profile-img img-fluid" src="./images/award.gif" />
+            <h2 class="text-purple">Engage in Elite Bidding</h2>
+            <p>
+              <strong>
+                Partake in the art of bidding exclusively as a member. Please
+                <a href="./pages/login/">sign in</a> to place your bids. New to
+                our distinguished community?
+                <a href="./pages/register/">Register now</a> and receive a
+                generous 1000 credits to commence your journey.
+              </strong>
+            </p>
+            <p>
+              Navigate our curated collections or employ our sophisticated
+              search system to uncover the exact item your heart desires.
+            </p>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <img class="profile-img img-fluid" src="./images/money-bag.gif" />
+            <h2 class="text-purple mb-3">Build Your Empire</h2>
+            <p>
+              <strong>
+                Transcend the ordinary and build your auction empire. Watch,
+                bid, and accumulate high-value assets. Our
+                <a href="./pages/login/">portal</a>
+                will aid you in monitoring, maintaining, and growing your
+                collection.
+              </strong>
+            </p>
+            <p>
+              With every bid, advance a step closer to becoming the crown jewel
+              of the auction world. Rise above the competition. Outbid. Triumph.
+            </p>
+          </div>
         </div>
-        
-       
-       <!-- AUCTION-THEMED IMAGE SECTION -->
-     <div class="auction-themed-image-section">
-    <h1 class="section-title">Discover Rare Finds</h1>
-    <p class="section-subtitle">Join the thrill of the auction and own a piece of history.</p>
-    <div class="image-container">
-        <img class="img-auction-responsive" src="./images/auction-gavel.png" alt="Auction Gavel" />
-    </div>
-</div>
+      </div>
 
-       <!-- TESTIMONIAL SECTION -->
-        <section class="testimonial mt-4" id="testimoni">
-            <div class="container">
-                <div class="testimonial-text">
-                    <h1 class="heading-service text-center">Testimonials</h1>
-                    <h3 class="detail-heading detail-testimonial text-center">Hear what our delighted customers have to say about their experiences</h3>
-                </div>
-        
-                <div class="testimonial-contents">
-                    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="card card-body body-testi">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <img src="https://i.ibb.co/FB9TD6r/profile-Testi.png" alt="profile-Testimonial" class="profile-testi mx-auto">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="text-center">
-                                                <img src="https://i.ibb.co/kBf3Kwd/Rate.png" alt="Rate" class="mt-3 mb-3 rate-testimonial">
-                                            </div>
-                                            <div class="text-testimonial">
-                                                <p class="card-detail-testi">"I've attended several online auctions, but none compare to the excitement and ease of this platform. I secured a beautiful piece of art that's now the centerpiece of my living room. Thank you for such a fantastic service!"</p>
-                                                <p class="person-name"><strong>Samantha Clark, 45, New York</strong></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card card-body body-testi">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <img src="https://i.ibb.co/MPWzMK3/img-photo.png" alt="img-photo" class="profile-testi mx-auto">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="text-center">
-                                                <img src="https://i.ibb.co/kBf3Kwd/Rate.png" alt="Rate" class="mt-3 mb-3 rate-testimonial">
-                                            </div>
-                                            <div class="text-testimonial">
-                                                <p class="card-detail-testi">"The thrill of the auction is matched only by the quality of the items. I've expanded my collection with several rare finds from this site, and I can't wait for the next auction event!"</p>
-                                                <p class="person-name"><strong>Michael Thompson, 38, London</strong></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card card-body body-testi">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <img src="https://i.ibb.co/FB9TD6r/profile-Testi.png" alt="profile-Testimonial" class="profile-testi mx-auto">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="text-center">
-                                                <img src="https://i.ibb.co/kBf3Kwd/Rate.png" alt="Rate" class="mt-3 mb-3 rate-testimonial">
-                                            </div>
-                                            <div class="text-testimonial">
-                                                <p class="card-detail-testi">"As a first-time bidder, I was nervous about the process, but the customer support team guided me through every step. I was successful in my first bid and couldn't be happier with my purchase!"</p>
-                                                <p class="person-name"><strong>Emily Patel, 29, Sydney</strong></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card card-body body-testi">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <img src="https://i.ibb.co/MPWzMK3/img-photo.png" alt="img-photo" class="profile-testi mx-auto">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="text-center">
-                                                <img src="https://i.ibb.co/kBf3Kwd/Rate.png" alt="Rate" class="mt-3 mb-3 rate-testimonial">
-                                            </div>
-                                            <div class="text-testimonial">
-                                                <p class="card-detail-testi">"Every auction is an adventure. I've discovered gems that I never expected to find and met fellow enthusiasts who share my passion for vintage collectibles. This isn't just an auction site; it's a community."</p>
-                                                <p class="person-name"><strong>Lucas Grant, 52, Toronto</strong></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+      <!-- AUCTION-THEMED IMAGE SECTION -->
+      <div class="auction-themed-image-section">
+        <h1 class="section-title">Discover Rare Finds</h1>
+        <p class="section-subtitle">
+          Join the thrill of the auction and own a piece of history.
+        </p>
+        <div class="image-container">
+          <img
+            class="img-auction-responsive"
+            src="./images/auction-gavel.png"
+            alt="Auction Gavel"
+          />
+        </div>
+      </div>
+
+      <!-- TESTIMONIAL SECTION -->
+      <section class="testimonial mt-4" id="testimoni">
+        <div class="container">
+          <div class="testimonial-text">
+            <h1 class="heading-service text-center">Testimonials</h1>
+            <h3 class="detail-heading detail-testimonial text-center">
+              Hear what our delighted customers have to say about their
+              experiences
+            </h3>
+          </div>
+
+          <div class="testimonial-contents">
+            <div
+              id="carouselExampleControlsNoTouching"
+              class="carousel slide"
+              data-bs-touch="false"
+              data-bs-interval="false"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="card card-body body-testimonial">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img
+                          src="https://i.ibb.co/FB9TD6r/profile-Testi.png"
+                          alt="profile-Testimonial"
+                          class="profile-testi mx-auto"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <div class="text-center">
+                          <img
+                            src="https://i.ibb.co/kBf3Kwd/Rate.png"
+                            alt="Rate"
+                            class="mt-3 mb-3 rate-testimonial"
+                          />
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-                            <img src="https://i.ibb.co/mJRWGqR/Left-button.png" alt="Left-button" style="margin-left: -20px;">
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-                            <img src="https://i.ibb.co/BthnFmt/Right-button.png" alt="Right-button" style="margin-right: -20px;">
-                            <span class="visually-hidden">Next</span>
-                        </button>
+                        <div class="text-testimonial">
+                          <p class="card-detail-testi">
+                            "I've attended several online auctions, but none
+                            compare to the excitement and ease of this platform.
+                            I secured a beautiful piece of art that's now the
+                            centerpiece of my living room. Thank you for such a
+                            fantastic service!"
+                          </p>
+                          <p class="person-name">
+                            <strong>Samantha Clark, 45, New York</strong>
+                          </p>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+                <div class="carousel-item">
+                  <div class="card card-body body-testi">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img
+                          src="https://i.ibb.co/MPWzMK3/img-photo.png"
+                          alt="img-photo"
+                          class="profile-testi mx-auto"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <div class="text-center">
+                          <img
+                            src="https://i.ibb.co/kBf3Kwd/Rate.png"
+                            alt="Rate"
+                            class="mt-3 mb-3 rate-testimonial"
+                          />
+                        </div>
+                        <div class="text-testimonial">
+                          <p class="card-detail-testi">
+                            "The thrill of the auction is matched only by the
+                            quality of the items. I've expanded my collection
+                            with several rare finds from this site, and I can't
+                            wait for the next auction event!"
+                          </p>
+                          <p class="person-name">
+                            <strong>Michael Thompson, 38, London</strong>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card card-body body-testi">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img
+                          src="https://i.ibb.co/FB9TD6r/profile-Testi.png"
+                          alt="profile-Testimonial"
+                          class="profile-testi mx-auto"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <div class="text-center">
+                          <img
+                            src="https://i.ibb.co/kBf3Kwd/Rate.png"
+                            alt="Rate"
+                            class="mt-3 mb-3 rate-testimonial"
+                          />
+                        </div>
+                        <div class="text-testimonial">
+                          <p class="card-detail-testi">
+                            "As a first-time bidder, I was nervous about the
+                            process, but the customer support team guided me
+                            through every step. I was successful in my first bid
+                            and couldn't be happier with my purchase!"
+                          </p>
+                          <p class="person-name">
+                            <strong>Emily Patel, 29, Sydney</strong>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card card-body body-testi">
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img
+                          src="https://i.ibb.co/MPWzMK3/img-photo.png"
+                          alt="img-photo"
+                          class="profile-testi mx-auto"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <div class="text-center">
+                          <img
+                            src="https://i.ibb.co/kBf3Kwd/Rate.png"
+                            alt="Rate"
+                            class="mt-3 mb-3 rate-testimonial"
+                          />
+                        </div>
+                        <div class="text-testimonial">
+                          <p class="card-detail-testi">
+                            "Every auction is an adventure. I've discovered gems
+                            that I never expected to find and met fellow
+                            enthusiasts who share my passion for vintage
+                            collectibles. This isn't just an auction site; it's
+                            a community."
+                          </p>
+                          <p class="person-name">
+                            <strong>Lucas Grant, 52, Toronto</strong>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="prev"
+              >
+                <img
+                  src="https://i.ibb.co/mJRWGqR/Left-button.png"
+                  alt="Left-button"
+                  style="margin-left: -20px"
+                />
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControlsNoTouching"
+                data-bs-slide="next"
+              >
+                <img
+                  src="https://i.ibb.co/BthnFmt/Right-button.png"
+                  alt="Right-button"
+                  style="margin-right: -20px"
+                />
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-        </section>
-        <!-- END OF TESTIMONIAL SECTION -->
-        
+          </div>
+        </div>
+      </section>
+      <!-- END OF TESTIMONIAL SECTION -->
     </main>
     <footer>
-        <div class="container py-2">
-            <!-- Navigation links -->
-            <div class="footer-nav d-flex flex-column flex-md-row align-items-center justify-content-center mb-3 mb-md-0">
-                <a href="#/pages/terms/" class="mx-2 my-1">Terms of Service</a>
-                <div class="mx-2 divider d-none d-md-block"></div>
-                <a href="#/pages/privacy/" class="mx-2 my-1">Privacy Policy</a>
-                <div class="mx-2 divider d-none d-md-block"></div>
-                <a href="#/pages/about/" class="mx-2 my-1">About Us</a>
-                <div class="mx-2 divider d-none d-md-block"></div>
-                <a href="#/pages/contact/" class="mx-2 my-1">Contact</a>
-            </div>
-        
-            <!-- Social Media Icons -->
-            <div class="social-icons d-flex align-items-center justify-content-center mb-3 mb-md-0">
-                <div class="social-icons d-flex align-items-center mb-3 mb-md-0">
-                    <a href="#" class="mx-2">
-                        <img src="../../assets/icons/facebook.svg" alt="Facebook" width="24" height="24">
-                    </a>
-                    <a href="#" class="mx-2">
-                        <img src="../../assets/icons/twitter.svg" alt="Twitter" width="24" height="24">
-                    </a>
-                    <a href="#" class="mx-2">
-                        <img src="../../assets/icons/instagram.svg" alt="Instagram" width="24" height="24">
-                    </a>
-                    <a href="#" class="mx-2">
-                        <img src="../../assets/icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
-                    </a>
-                </div>
-        
-            </div>
-        
-            <!-- Logo and Byline -->
-            <div class="text-center mb-3">
-                <h3 class="fs-3">Auction <span class="text-secondary">Platform</span></h3>
-                <p class="fs-6">By Web developers - Design by <a href="#" class="text-muted">Ethmane</a></p>
-            </div>
-        
-            <!-- Copyright Information -->
-            <div class="d-flex flex-column align-items-center justify-content-center">
-                <div class="copyright mb-2">
-                    © 2023 Auction Platform. All rights reserved.
-                </div>
-            </div>
+      <div class="container py-2">
+        <!-- Navigation links -->
+        <div
+          class="footer-nav d-flex flex-column flex-md-row align-items-center justify-content-center mb-3 mb-md-0"
+        >
+          <a href="#/pages/terms/" class="mx-2 my-1">Terms of Service</a>
+          <div class="mx-2 divider d-none d-md-block"></div>
+          <a href="#/pages/privacy/" class="mx-2 my-1">Privacy Policy</a>
+          <div class="mx-2 divider d-none d-md-block"></div>
+          <a href="#/pages/about/" class="mx-2 my-1">About Us</a>
+          <div class="mx-2 divider d-none d-md-block"></div>
+          <a href="#/pages/contact/" class="mx-2 my-1">Contact</a>
         </div>
+
+        <!-- Social Media Icons -->
+        <div
+          class="social-icons d-flex align-items-center justify-content-center mb-3 mb-md-0"
+        >
+          <div class="social-icons d-flex align-items-center mb-3 mb-md-0">
+            <a href="#" class="mx-2">
+              <img
+                src="../../assets/icons/facebook.svg"
+                alt="Facebook"
+                width="24"
+                height="24"
+              />
+            </a>
+            <a href="#" class="mx-2">
+              <img
+                src="../../assets/icons/twitter.svg"
+                alt="Twitter"
+                width="24"
+                height="24"
+              />
+            </a>
+            <a href="#" class="mx-2">
+              <img
+                src="../../assets/icons/instagram.svg"
+                alt="Instagram"
+                width="24"
+                height="24"
+              />
+            </a>
+            <a href="#" class="mx-2">
+              <img
+                src="../../assets/icons/linkedin.svg"
+                alt="LinkedIn"
+                width="24"
+                height="24"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Logo and Byline -->
+        <div class="text-center mb-3">
+          <h3 class="fs-3">
+            Auction <span class="text-secondary">Platform</span>
+          </h3>
+          <p class="fs-6">
+            By Web developers - Design by
+            <a href="#" class="text-muted">Ethmane</a>
+          </p>
+        </div>
+
+        <!-- Copyright Information -->
+        <div
+          class="d-flex flex-column align-items-center justify-content-center"
+        >
+          <div class="copyright mb-2">
+            © 2023 Auction Platform. All rights reserved.
+          </div>
+        </div>
+      </div>
     </footer>
-      
-    
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    
+
     <!-- Popper.js (necessary for Bootstrap tooltips and popovers) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-    
-    
-      <!-- Bootstrap Link -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  
 
-      <!-- Bootstrap JS, Popper.js, and jQuery -->
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.2/dist/umd/popper.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <!-- Bootstrap Link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
 
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>

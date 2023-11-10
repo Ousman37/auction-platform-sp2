@@ -23,7 +23,6 @@ module.exports = {
     // ... your other rules
   },
   globals: {
-    toastr: "readonly"
+    toastr: "readonly",
   },
-  
 };

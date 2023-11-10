@@ -21,7 +21,7 @@ export async function register(profile) {
       showEasing: "swing",
       hideEasing: "linear",
       showMethod: "fadeIn",
-      hideMethod: "fadeOut"
+      hideMethod: "fadeOut",
     };
   } else {
     console.error("Toastr is not available or not properly initialized.");
@@ -48,9 +48,11 @@ export async function register(profile) {
         window.location.href = `../../pages/login`;
       }, 1000);
     } else {
-      const errorMessage = result.message || "The input values seem to be invalid. Please try again.";
+      const errorMessage =
+        result.message ||
+        "The input values seem to be invalid. Please try again.";
       if (result.errors && result.errors.length) {
-        result.errors.forEach(err => {
+        result.errors.forEach((err) => {
           console.error("Server Error:", err);
           toastr.error(err);
         });
@@ -62,7 +64,8 @@ export async function register(profile) {
     return result;
   } catch (error) {
     console.error("Error in registration:", error);
-    toastr.error('An error occurred during registration. Please try again later.');
+    toastr.error(
+      "An error occurred during registration. Please try again later.",
+    );
   }
 }
-

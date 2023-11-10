@@ -22,7 +22,7 @@ export async function login(profile) {
       showEasing: "swing",
       hideEasing: "linear",
       showMethod: "fadeIn",
-      hideMethod: "fadeOut"
+      hideMethod: "fadeOut",
     };
   } else {
     console.error("Toastr is not available or not properly initialized.");
@@ -52,11 +52,10 @@ export async function login(profile) {
       }, 1000);
     } else {
       // Use toastr error for error messages
-      toastr.error('Invalid email or password, try again.');
+      toastr.error("Invalid email or password, try again.");
     }
   } catch (error) {
     // Handle any other errors like network issues
-    toastr.error('An error occurred. Please try again later.');
+    toastr.error("An error occurred. Please try again later.");
   }
 }
-

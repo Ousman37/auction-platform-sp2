@@ -1,139 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.typekit.net/eog4cop.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../dist/css/style.css">
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.typekit.net/eog4cop.css" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../dist/css/style.css" />
+
     <!-- Toastr CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
-    
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+      rel="stylesheet"
+    />
+
     <!-- Title of the Page-->
     <title>Auction Platform | Listings</title>
 
-    <!-- Meta Description --> 
-    <meta name="description" content="Explore top auction listings, find unique items, and place your bids on our Auction Platform. Join now to start your bidding journey.">
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="Explore top auction listings, find unique items, and place your bids on our Auction Platform. Join now to start your bidding journey."
+    />
 
-
-      <!-- Toastr JS -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
-    
-     
-</head>
-<body>
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  </head>
+  <body>
     <!-- Header: Using Bootstrap Navbar Component -->
     <header class="shadow-sm">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="./index.html">
-                    <div class="d-flex align-items-center fs-2 py-2">
-                        <p class="m-0">Auction</p>
-                        <p class="m-0 text-secondary">Platform</p>
-                    </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="./index.html">
+            <div class="d-flex align-items-center fs-2 py-2">
+              <p class="m-0">Auction</p>
+              <p class="m-0 text-secondary">Platform</p>
+            </div>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li id="navListing" class="nav-item mx-2">
+                <a class="nav-link" href="../listings/">Listings</a>
+              </li>
+              <li id="navProfile" class="nav-item mx-2">
+                <a href="../../index.html">
+                  <img
+                    id="navImg"
+                    src="path-to-profile-image.jpg"
+                    class="nav-img"
+                    alt="Profile"
+                  />
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li id="navListing" class="nav-item mx-2">
-                            <a class="nav-link" href="../listings/">Listings</a>
-                        </li>
-                        <li id="navProfile" class="nav-item mx-2">
-                            <a href="../../index.html">
-                                <img id="navImg" src="path-to-profile-image.jpg" class="nav-img" alt="Profile" />
-                            </a>
-                        </li>
-                        <li id="navLogout" class="nav-item mx-2">
-                            <a class="nav-link text-danger" href="#">Logout</a>
-                        </li>
-                        <li id="navLogin" class="nav-item mx-2">
-                            <a href="../login/" class="btn btn-primary">Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+              </li>
+              <li id="navLogout" class="nav-item mx-2">
+                <a class="nav-link text-danger" href="#">Logout</a>
+              </li>
+              <li id="navLogin" class="nav-item mx-2">
+                <a href="../login/" class="btn btn-primary">Login</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main>
-        <div>
-            <div class="bg-light pt-4">
-                <div class="width mx-auto">
-                    <input id="searchbar" class="p-2 border-0 w-100 d-flex mx-auto" type="search" placeholder="Search for Listings, categories, or auctions...">
-                </div>
-            </div>
-            <svg viewBox="0 0 500 50" preserveAspectRatio="xMinYMin meet">
-                <path class="layer-fill" d="M0, 30 C200, -10 350, 70 500, 30 L500, 00 L0, 0 Z"></path>
-            </svg>
+      <div>
+        <div class="bg-light pt-4">
+          <div class="width mx-auto">
+            <input
+              id="searchbar"
+              class="p-2 border-0 w-100 d-flex mx-auto"
+              type="search"
+              placeholder="Search for Listings, categories, or auctions..."
+            />
+          </div>
         </div>
-        <div class="width m-auto">
-            <h1 class="h2 text-center text-lg-start ms-2 mb-4">Featured Listings</h1>
-            <hr class="light-p">
-        </div>
-        <div class="loading_icon"></div>
-        <div id="noListings" class="vh-100">
-            <h2 class="text-center p-5 text-secondary"> Hmm... Looks like there isn't any listings here? </h3>
-        </div>
-        <div id="listingsContainer" class="listings width m-auto d-flex flex-wrap justify-content-center justify-content-lg-between"></div>
+        <svg viewBox="0 0 500 50" preserveAspectRatio="xMinYMin meet">
+          <path
+            class="layer-fill"
+            d="M0, 30 C200, -10 350, 70 500, 30 L500, 00 L0, 0 Z"
+          ></path>
+        </svg>
+      </div>
+      <div class="width m-auto">
+        <h1 class="h2 text-center text-lg-start ms-2 mb-4">
+          Featured Listings
+        </h1>
+        <hr class="light-p" />
+      </div>
+      <div class="loading_icon"></div>
+      <div id="noListings" class="vh-100">
+        <h2 class="text-center p-5 text-secondary">
+          Hmm... Looks like there isn't any listings here?
+        </h2>
+      </div>
+      <div
+        id="listingsContainer"
+        class="listings width m-auto d-flex flex-wrap justify-content-center justify-content-lg-between"
+      ></div>
     </main>
     <footer>
-        <div class="container py-2">
-            <!-- Navigation links -->
-            <div class="footer-nav d-flex flex-column flex-md-row align-items-center justify-content-center mb-3 mb-md-0">
-                <a href="#/pages/terms/" class="mx-2 my-1">Terms of Service</a>
-                <div class="mx-2 divider d-none d-md-block"></div>
-                <a href="#/pages/privacy/" class="mx-2 my-1">Privacy Policy</a>
-                <div class="mx-2 divider d-none d-md-block"></div>
-                <a href="#/pages/about/" class="mx-2 my-1">About Us</a>
-                <div class="mx-2 divider d-none d-md-block"></div>
-                <a href="#/pages/contact/" class="mx-2 my-1">Contact</a>
-            </div>
-        
-            <!-- Social Media Icons -->
-            <div class="social-icons d-flex align-items-center justify-content-center mb-3 mb-md-0">
-                <div class="social-icons d-flex align-items-center mb-3 mb-md-0">
-                    <a href="#" class="mx-2">
-                        <img src="../../assets/icons/facebook.svg" alt="Facebook" width="24" height="24">
-                    </a>
-                    <a href="#" class="mx-2">
-                        <img src="../../assets/icons/twitter.svg" alt="Twitter" width="24" height="24">
-                    </a>
-                    <a href="#" class="mx-2">
-                        <img src="../../assets/icons/instagram.svg" alt="Instagram" width="24" height="24">
-                    </a>
-                    <a href="#" class="mx-2">
-                        <img src="../../assets/icons/linkedin.svg" alt="LinkedIn" width="24" height="24">
-                    </a>
-                </div>
-        
-            </div>
-        
-            <!-- Logo and Byline -->
-            <div class="text-center mb-3">
-                <h3 class="fs-3">Auction <span class="text-secondary">Platform</span></h3>
-                <p class="fs-6">By Web developers - Design by <a href="#" class="text-muted">Ethmane</a></p>
-            </div>
-        
-            <!-- Copyright Information -->
-            <div class="d-flex flex-column align-items-center justify-content-center">
-                <div class="copyright mb-2">
-                    © 2023 Auction Platform. All rights reserved.
-                </div>
-            </div>
+      <div class="container py-2">
+        <!-- Navigation links -->
+        <div
+          class="footer-nav d-flex flex-column flex-md-row align-items-center justify-content-center mb-3 mb-md-0"
+        >
+          <a href="#/pages/terms/" class="mx-2 my-1">Terms of Service</a>
+          <div class="mx-2 divider d-none d-md-block"></div>
+          <a href="#/pages/privacy/" class="mx-2 my-1">Privacy Policy</a>
+          <div class="mx-2 divider d-none d-md-block"></div>
+          <a href="#/pages/about/" class="mx-2 my-1">About Us</a>
+          <div class="mx-2 divider d-none d-md-block"></div>
+          <a href="#/pages/contact/" class="mx-2 my-1">Contact</a>
         </div>
+
+        <!-- Social Media Icons -->
+        <div
+          class="social-icons d-flex align-items-center justify-content-center mb-3 mb-md-0"
+        >
+          <div class="social-icons d-flex align-items-center mb-3 mb-md-0">
+            <a href="#" class="mx-2">
+              <img
+                src="../../assets/icons/facebook.svg"
+                alt="Facebook"
+                width="24"
+                height="24"
+              />
+            </a>
+            <a href="#" class="mx-2">
+              <img
+                src="../../assets/icons/twitter.svg"
+                alt="Twitter"
+                width="24"
+                height="24"
+              />
+            </a>
+            <a href="#" class="mx-2">
+              <img
+                src="../../assets/icons/instagram.svg"
+                alt="Instagram"
+                width="24"
+                height="24"
+              />
+            </a>
+            <a href="#" class="mx-2">
+              <img
+                src="../../assets/icons/linkedin.svg"
+                alt="LinkedIn"
+                width="24"
+                height="24"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- Logo and Byline -->
+        <div class="text-center mb-3">
+          <h3 class="fs-3">
+            Auction <span class="text-secondary">Platform</span>
+          </h3>
+          <p class="fs-6">
+            By Web developers - Design by
+            <a href="#" class="text-muted">Ethmane</a>
+          </p>
+        </div>
+
+        <!-- Copyright Information -->
+        <div
+          class="d-flex flex-column align-items-center justify-content-center"
+        >
+          <div class="copyright mb-2">
+            © 2023 Auction Platform. All rights reserved.
+          </div>
+        </div>
+      </div>
     </footer>
-     <!-- Bootstrap JS, Popper.js, and jQuery -->
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.2/dist/umd/popper.min.js"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
-     <!-- Custom Script -->
-     <script type="module" src="/src/js/index.mjs" defer></script>
-</body>
+    <!-- Custom Script -->
+    <script type="module" src="/src/js/index.mjs" defer></script>
+  </body>
 </html>

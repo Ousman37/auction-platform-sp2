@@ -11,5 +11,3 @@ export async function viewProfileListings() {
     // Handle this error, maybe show a message to the user or navigate back
   }
 }
-
-
