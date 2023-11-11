@@ -11,16 +11,17 @@
 @import './card';
 @import './input-group';
 
-// custom classes
-
 // -------- Global --------- //
 
 .width {
   max-width: 1220px;
-  padding: 5px 20px;
+  padding: 0 20px;
 }
 
-/* Custom styles for the auction image layer */
+/* Auction image layer styles */
+.layer {
+  background-color: $light-grey;
+}
 
 .layer .text-box {
   text-align: center;
@@ -29,7 +30,6 @@
 .layer .text-box h1 {
   font-size: 2rem;
   color: $classic-white;
-  font-weight: 700;
 }
 
 .layer .text-box p {
@@ -44,15 +44,12 @@
 
 .layer .responsive-image {
   width: 100%;
-  height: auto;
   max-width: 600px;
   object-fit: contain;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
   border-radius: 1rem;
 }
 
-/* Responsive adjustments with media queries */
+/* Responsive adjustments */
 @media (max-width: 991px) {
   .layer .text-box {
     margin-bottom: 2rem;
@@ -60,10 +57,6 @@
 }
 
 @media (max-width: 767px) {
-  .layer {
-    padding: 1rem;
-  }
-
   .layer .text-box h1 {
     font-size: 1.75rem;
   }
@@ -73,62 +66,33 @@
   }
 }
 
-.layer {
-  background-color: $light-grey;
-}
-
-.layer-fill {
-  fill: $light-grey;
-}
-
-.modal-bg {
-  background-color: $fade-blue-gray;
-}
-
-svg {
-  z-index: -1;
-}
-
-li {
-  list-style: none;
-  margin: 5px 0px;
-}
-
-.icon-size {
-  width: 20px;
-}
-
+/* Global element styles */
 body {
-  margin: 0px;
+  margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   color: $secondary;
 }
 
 main {
-  min-height: 70rem;
+  flex-grow: 1;
 }
 
 .loading_icon {
+  display: block;
+  margin: 50px auto;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   border-top: 5px solid $primary;
   border-right: 5px solid transparent;
-  box-sizing: border-box;
-  width: 100px;
-  height: 100px;
-  -webkit-animation: rotation 1s linear infinite;
   animation: rotation 1s linear infinite;
-  margin: 50px auto;
 }
 
 @keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+  to {
+    transform: rotate(1turn);
   }
 }
 
@@ -139,33 +103,23 @@ main {
   color: $rich-purple;
 }
 
-.logo-img {
-  width: 40px;
+.logo-img,
+.nav-img {
+  width: 50px;
   height: 50px;
+  border-radius: 50%;
 }
 
 nav {
   color: $dark-grey;
 }
 
-.nav-img {
-  width: 50px;
-  height: 50px;
-  border-radius: 360px;
-  cursor: pointer;
-}
-
 .cool-hover {
   background-image: linear-gradient($primary, $primary);
-  background-position-x: 50%;
-  background-position-y: 100%;
+  background-position: 50% 100%;
+  background-size: 0% 0.1em;
   background-repeat: no-repeat;
   transition: background-size 0.3s ease-in-out;
-  padding: 5px;
-}
-
-.cool-hover {
-  background-size: 0% 0.1em;
 }
 
 .cool-hover:hover {
@@ -180,43 +134,32 @@ nav {
 
 .img-fluid {
   max-width: 80%;
-  height: auto;
-  margin-left: 98px;
+  border-radius: 20px;
+  margin: 15px auto;
   display: block;
-  margin-top: 15px;
-  border-radius: 20px 20px 20px 20px;
 }
 
-// text-testimonial
+// -------- Testimonial Styles --------- //
+
 .text-testimonial {
-  color: $off-white;
+  color: $mid-grey;
 }
 
 .body-testimonial {
-  margin-top: 3rem;
   background-color: $fade-blue-gray;
+  margin-top: 3rem;
 }
-// .success-message {
-//   color: #28a745; /* Green color for success */
-//   /* Additional styling */
-// }
 
-// .error-message {
-//   color: #dc3545; /* Red color for error */
-//   /* Additional styling */
-// }
+// -------- Custom Classes --------- //
 
-// Profile tester
 .plus-sign {
   font-size: 1.8em;
   color: $vibrant-yellow;
   margin-right: 0.5em;
 }
 
-/* Adding some basic styling for demonstration */
-
 #profile-container {
-  background-color: #fff;
+  background-color: $classic-white;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
@@ -231,15 +174,20 @@ nav {
 .card {
   background-color: $off-white;
   margin: 5px;
-  border-radius: 8px;
   padding: 10px;
+  border-radius: 8px;
 }
 
 .bg-light {
   background-color: $off-white !important;
 }
 
-// -------- Profile --------- //
+/* More custom classes can be added here */
+
+
+
+/*  Profile Section  */
+
 #bidListings,
 #profile-listings {
   display: grid;
@@ -249,73 +197,70 @@ nav {
 
 .width {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 0 15px;
 }
 
 .profile-img {
   max-width: 250px;
   max-height: 250px;
-  border-radius: 10px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 3px solid $primary; 
 }
 
 .shadow {
-  box-shadow: 0px 0px 15px 0px fade-blue-gray;
+  box-shadow: 0 4px 8px rgba($fade-blue-gray, 0.2); 
 }
 
 .input-fix {
   border: none;
   border-bottom: 2px solid $primary;
-  border-radius: 10px;
-  display: flex;
-  padding: 10px 35px;
+  padding: 10px 20px;
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
 .change-avatar {
-  border-bottom: 2px solid $primary;
   cursor: pointer;
   padding: 5px 10px;
+  border-radius: 5px; 
+  transition: all 0.3s ease; 
 }
-
 .change-avatar:hover {
-  border-radius: 5px;
+  background-color: $light-grey; 
 }
 
-.bidHistoryElements:nth-child(odd) {
-  background-color: $light-grey;
+.bidHistoryElements {
+  background-color: $classic-white;
+  border: 1px solid $light-grey; 
+  padding: 10px;
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; 
 }
 
-.bidHistoryElements:nth-child(even) {
-  background-color: $white;
+.bidHistoryElements:hover {
+  background-color: $light-purple; 
 }
 
-.bidHistoryElements:nth-child(odd):hover {
-  background-color: $light-purple;
-}
-
-.bidHistoryElements:nth-child(even):hover {
-  background-color: $light-purple;
-}
-
-// -------- Listings --------- //
+/*  Listings Section  */  
 
 .listing {
   overflow: hidden;
   width: 300px;
   min-height: 500px;
-  box-shadow: 5px 5px 10px 5px $light-grey;
-  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 10px 20px rgba($light-purple, 0.2);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.listingCard:hover {
-  background-color: $fade-blue-gray;
-  transition: ease-in-out;
-  box-shadow: none;
-  border-radius: 10px;
+.listing:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba($light-purple, 0.4);
 }
 
 .border-fix {
-  border-radius: 0px 0px 15px 0px;
+  border-radius: 15px 15px 0 0;
 }
 
 .box-border {
@@ -328,77 +273,86 @@ nav {
 
 .description-width {
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .bidder-card {
   min-width: 250px;
-  border-radius: 360px;
+  border-radius: 50px;
   background-color: $off-white;
-  padding: 5px 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 10px rgba($fade-blue-gray, 0.2);
 }
 
-.selector-img {
+.selector-img,
+.avatarContainer {
   background-size: cover;
   background-position: center;
-  width: 50px;
-  height: 50px;
+  border-radius: 50%;
   overflow: hidden;
-  margin: 5px 5px;
   cursor: pointer;
 }
 
-.listing-img {
-  background-size: cover;
-  background-position: center;
-  min-width: 300px;
-  min-height: 300px;
+.selector-img {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
 }
 
 .avatarContainer {
   width: 100px;
   height: 100px;
-  overflow: hidden;
-  border-radius: 360px;
-  position: relative;
 }
 
 .avatarImg {
+  max-width: 100%;
+  height: auto;
   position: absolute;
-  top: -9999px;
-  bottom: -9999px;
-  left: -9999px;
-  right: -9999px;
-  margin: auto;
-  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .custom-card {
   padding: 20px;
   border-radius: 10px;
   background-color: $classic-white;
-  box-shadow: 0px 0px 15px 0px $fade-blue-gray;
+  box-shadow: 0 5px 15px rgba($fade-blue-gray, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  box-shadow: 0 8px 25px rgba($fade-blue-gray, 0.2);
+}
+
+.listing-img {
+  min-width: 300px;
+  min-height: 300px;
 }
 
 .mediaContainer {
   overflow-x: auto;
+  white-space: nowrap;
 }
 
 ::-webkit-scrollbar {
-  padding: 10px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: $rich-purple;
-  border-radius: 360px;
+  border-radius: 10px;
 }
 
 // Breakpoints
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 
-// Footer styles
+/*  Footer Section  styles */  
 footer {
   background-color: $mid-grey;
   color: $classic-white;
