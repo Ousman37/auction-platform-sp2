@@ -11,6 +11,24 @@
 @import './card';
 @import './input-group';
 
+
+
+/* Add some margin to the bottom of the search bar container */
+.bg-light {
+  padding-top: 4rem;
+  padding-bottom: 2rem; 
+}
+
+/* Ensure the main content has padding at the top to separate from the search bar */
+main {
+  padding-top: 2rem; 
+}
+
+/* Style for the section title */
+.width.m-auto.mb-5 {
+  margin-top: 2rem; 
+}
+
 // -------- Global --------- //
 
 .width {
@@ -138,6 +156,56 @@ nav {
   margin: 15px auto;
   display: block;
 }
+
+/* Search bar Styles*/
+#searchbar {
+  padding: 12px 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 20px 20px;
+  padding-right: 40px; 
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ccc;
+  pointer-events: none; 
+}
+
+#searchbar:focus {
+  transform: scale(1.02); /* Scales the search bar a bit */
+  box-shadow: 0 3px 8px rgba(32, 33, 36, 0.28);
+}
+
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#searchbar {
+  /* ... other styles ... */
+  animation: pulseAnimation 2s infinite ease-in-out;
+}
+
+
+
 
 // -------- Testimonial Styles --------- //
 
