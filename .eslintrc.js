@@ -2,8 +2,12 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    'cypress/globals': true, // Add this line for Cypress globals
   },
-  extends: 'eslint:recommended',
+  extends: [
+    'eslint:recommended',
+    'plugin:cypress/recommended' // Add this line to extend cypress recommended rules
+  ],
   overrides: [
     {
       env: {
@@ -24,5 +28,9 @@ module.exports = {
   },
   globals: {
     toastr: 'readonly',
+    // ... any other globals you have
   },
+  plugins: [
+    'cypress' // Add this line to include the cypress plugin
+  ]
 }
