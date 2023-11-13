@@ -2,6 +2,7 @@
   "name": "auction-platform-sp2",
   "version": "1.0.0",
   "description": "An auction platform for user item listings and bidding, built as a part of Semester Project 2.",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "build": "sass src/scss:dist/css",

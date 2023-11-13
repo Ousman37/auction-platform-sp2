@@ -1,8 +1,10 @@
 module.exports = {
+  
   env: {
     browser: true,
     es2021: true,
     'cypress/globals': true, // Add this line for Cypress globals
+    node: true, // Add this line to recognize Node.js global variables and scope
   },
   extends: [
     'eslint:recommended',
@@ -12,14 +14,16 @@ module.exports = {
     {
       env: {
         node: true,
+        jest: true, 
       },
-      files: ['.eslintrc.{js,cjs}'],
+      files: ['.eslintrc.{js,cjs}', '**/*.js'], // Apply this override to all JavaScript files and .eslintrc.js
       parserOptions: {
         sourceType: 'script',
       },
     },
   ],
   parserOptions: {
+    
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
@@ -33,4 +37,4 @@ module.exports = {
   plugins: [
     'cypress' // Add this line to include the cypress plugin
   ]
-}
+};
