@@ -37,8 +37,10 @@ main {
 }
 
 /* Auction image layer styles */
+/* Auction image layer styles */
 .layer {
   background-color: $light-grey;
+  padding: 2rem; /* Add padding to make the background bigger */
 }
 
 .layer .text-box {
@@ -83,6 +85,7 @@ main {
     font-size: 0.9rem;
   }
 }
+
 
 /* Global element styles */
 body {
