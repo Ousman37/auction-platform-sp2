@@ -53,7 +53,7 @@ The Auction Platform SP2 is a web application that allows users to add items for
 
 ## Installation
 
-1. Clone the repository: `git clone <repository-link>`
+1. Clone the repository: `git clone https://github.com/Ousman37/auction-platform-sp2.git`
 2. Install dependencies: `npm install`
 
 ## Usage
