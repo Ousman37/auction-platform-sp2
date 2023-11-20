@@ -1,19 +1,12 @@
 # Auction Platform SP2
-
-[![License](https://img.shields.io/badge/license-ISC-blue.svg)](LICENSE)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D%2019.6.0-brightgreen.svg)](https://nodejs.org/)
-[![Bootstrap Version](https://img.shields.io/badge/bootstrap-5.2.3-blueviolet.svg)](https://getbootstrap.com/)
-[![Cypress Version](https://img.shields.io/badge/cypress-13.5.0-brightgreen.svg)](https://www.cypress.io/)
-[![Build Status](https://img.shields.io/travis/username/repo/master.svg)](https://travis-ci.org/username/repo)
-[![Coverage Status](https://img.shields.io/coveralls/github/username/repo/master.svg)](https://coveralls.io/github/username/repo?branch=master)
-[![Code Style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
-[![GitHub Issues](https://img.shields.io/github/issues/username/repo.svg)](https://github.com/username/repo/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/username/repo.svg)](https://github.com/username/repo/pulls)
-[![GitHub Stars](https://img.shields.io/github/stars/username/repo.svg)](https://github.com/username/repo/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/username/repo.svg)](https://github.com/username/repo/network/members)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+![Auction Platform Screenshot](https://github.com/Ousman37/auction-platform-sp2/blob/main/proj2.png?raw=true)
 
 An auction platform for user item listings and bidding, built as a part of Semester Project 2.
+
+[![Netlify Demo](https://img.shields.io/badge/demo-visit%20site-blueviolet)](https://visionary-sprite-8c6f10.netlify.app/)
+
+
+## Getting Started
 
 
 ## Table of Contents
@@ -53,7 +46,7 @@ The Auction Platform SP2 is a web application that allows users to add items for
 
 ## Installation
 
-1. Clone the repository: `git clone <repository-link>`
+1. Clone the repository: `git clone https://github.com/Ousman37/auction-platform-sp2.git`
 2. Install dependencies: `npm install`
 
 ## Usage
@@ -80,7 +73,8 @@ Feel free to contribute to this project. Follow the [contributing guidelines](CO
 
 ## License
 
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 ## Contact
 
