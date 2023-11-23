@@ -1,29 +1,96 @@
+/* Default styles for larger screens */
+.btn-primary {
+  background-color: $classic-white;
+  color: $secondary;
+   font-weight: 700;
+   border: 2px solid $primary;
+}
+
+/* Media query for small screens */
+@media (max-width: 767px) {
+  .btn-primary {
+    font-size: 14px; 
+    padding: 10px 20px; 
+  }
+}
+
+/* Media query for medium screens, like 360px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btn-primary,
+  .btn-secondary {
+    font-size: 16px; 
+    padding: 12px 24px; 
+  }
+}
+
+/* Media query for very small screens, like 280px */
+@media (max-width: 280px) {
+  .btn-primary {
+    font-size: 10px; 
+    padding: 6px 0; 
+  }
+
+  .btn-secondary {
+    font-size: 10px; 
+    padding: 6px 12px; 
+  }
+
+  .btn-secondary:hover {
+    background-color: $dark-grey !important;
+   
+  }
+}
+
+/* Media query for small screens, like 360px */
+@media (max-width: 360px) {
+  .btn-primary,
+  .btn-secondary {
+    
+    font-size: 14px; 
+    padding: 8px 16px !important; 
+  }
+}
+
+/* Media query for screens like 375px */
+@media (max-width: 375px) {
+  .btn-primary,
+  .btn-secondary { 
+    font-size: 14px; 
+    padding: 10px 18px !important; 
+  }
+}
+
+/* Media query for screens like 384px */
+@media (max-width: 384px) {
+  .btn-primary,
+  .btn-secondary {
+   
+    font-size: 14px; 
+    padding: 12px 20px !important; 
+  }
+}
+
+/* Secondary Button Styles */
 .btn-secondary {
   background-color: $dark-grey;
   border: none;
   color: $off-white;
+  border-radius: 12px;
+  padding: 12px 24px; 
 }
 
 .btn-secondary:hover {
   background-color: $dark-grey !important;
+ 
 }
 
+/* Success Button Styles */
 .btn-success {
   border: none;
+  border-radius: 12px;
 }
 
-.btn-primary {
-  background-color: $classic-white;
-  color: $secondary;
-  letter-spacing: 1.1px;
-  font-weight: 700;
-  border: 2px solid $primary;
-}
-
-.btn-primary:hover {
-  background-color: $primary;
-}
-
+/* General Button Styles */
 .btn {
   border-radius: 12px;
 }
