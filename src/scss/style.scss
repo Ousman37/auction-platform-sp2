@@ -422,6 +422,20 @@ nav {
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 
+
+
+ /* Add larger margin to the carousel controls for spacing */
+ .carousel-control-prev,
+ .carousel-control-next {
+   margin: 0 20px; 
+ }
+
+ /* Add larger padding to the testimonial text for spacing */
+ .text-testimonial {
+   padding: 56px; 
+ }
+
+
 /*  Footer Section  styles */  
 footer {
   background-color: $mid-grey;
